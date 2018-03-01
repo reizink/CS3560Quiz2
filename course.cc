@@ -3,6 +3,11 @@
 	course.
 		John Dolan		School of EECS		Summer2013
 **************************************************************************/
+
+/**
+@file course.cc
+@author Reilly Zink
+*/
 #include "course.h"
 #include<cstdlib>
 #include<iostream>
@@ -10,6 +15,9 @@
 #include<string>
 using namespace std;
 
+/**
+@brief course constructor
+*/
 course::course(){
     hours = 0.0;
 }
@@ -39,6 +47,9 @@ void course::input(std::istream& ins){
     }
 }
 
+/**
+@brief output an organized list of courses to 'outs'.
+*/
 void course::output(std::ostream& outs)const{
     if(outs == cout){
 	outs<<"Course Number:"<<course_number<<endl;
@@ -52,7 +63,9 @@ void course::output(std::ostream& outs)const{
       }
 }
 
-
+/**
+@brief converts letter grade to a number.
+*/
 double course::get_number_grade()const{
     if(grade == "A") return 4.0;
     if(grade == "A-") return 3.667;

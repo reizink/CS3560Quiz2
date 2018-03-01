@@ -4,6 +4,12 @@
 //CS 2401
 //10/8/2015
 //********************
+
+/**
+@file college.cc
+@author Reilly Zink
+*/
+
 #include "college.h"
 #include<cstdlib>
 #include<iostream>
@@ -11,12 +17,17 @@
 #include<string>
 using namespace std;
 
+/**
+@brief constructor
+*/
 College::College(std::string s){
 	name = s;
 	head = NULL;
 }
 
-
+/**
+@brief destructor
+*/
 College::~College(){
 	node * rmptr;
 	while(head != NULL){
@@ -26,6 +37,9 @@ College::~College(){
 	}
 }
 
+/**
+@brief copy constructor
+*/
 College::College(const College& other){
 	if(other.head == NULL){
 		head = NULL;

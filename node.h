@@ -5,6 +5,10 @@
                 John Dolan  		March 2009
 *************************************************************************/
 
+/**
+@file node.h
+@author Reilly Zink
+*/
 #ifndef NODE_H
 #define NODE_H
 #include "course.h"
@@ -17,8 +21,14 @@ class node{
 		{data_field = d;  link_field = l;}
 
         // Mutator functions
+	/**
+	@brief mutator void function that changes the data in the node.
+	*/
 	void set_data(value_type d)
 		{data_field = d;}
+	/**
+	@brief mutator void function that sets the nodes link to a location.
+	*/
 	void set_link(node *l)
 		{link_field = l;}
 

@@ -8,6 +8,10 @@
 	John Dolan			Ohio University 
 ********************************************************************/
 
+/**
+@file tarray.h
+@author Reilly Zink
+*/
 #include<iostream>
 
 template<class T>
@@ -19,6 +23,10 @@ class Tarray{
     	// This function puts the item into the next available spot in the 
 	//array.
 	// If the array is full, resize is called.
+	
+	/**
+	@brief void function that adds an item to the array and calls resize when full.
+	*/
 	void add(T item);
 
 	// iterator functions
@@ -38,6 +46,9 @@ class Tarray{
 	// removes the item at the current index spot
 	void remove_current();
     private:
+	/**
+	@brief void function that adds spaces to the array.
+	*/
 	void resize();
 	T *data; // pointer to the dynamic array
 	std::size_t capacity;

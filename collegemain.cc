@@ -12,6 +12,11 @@
 	John Dolan			Spring 2015
 **********************************************************/
 
+/**
+@file collegemain.cc
+@author Reilly Zink
+*/
+
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -48,6 +53,10 @@ int main(){
         fin.close();
 
 	choice = menu();
+	/**
+	@brief select what is wanted to change/add to the file.
+	@param a valid entry must be an integer from 0-6.
+	*/
 	while(choice != 0){
 	    switch(choice){
 	    case 1:
@@ -90,7 +99,9 @@ int main(){
 	    } //bottom of the switch
 	    choice = menu();
 	}// bottom or the while loop, which is a senteniel loop
-
+	/**
+	@brief updates your file with updated course load & GPA.
+	*/
     fout.open(filename.c_str());
     if(!fout.fail())
 	mycollege.save(fout);

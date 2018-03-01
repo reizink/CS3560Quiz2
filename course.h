@@ -7,6 +7,10 @@
 		John Dolan	School of EECS		Summer 2013
 ************************************************************************/
 
+/**
+@file course.h
+@author Reilly Zink
+*/
 #include<iostream>
 #include<string>
 #ifndef COURSE_H
@@ -33,8 +37,14 @@ class course{
 	void set_course(std::string num, std::string grad, double hrs);
 
 	//COMPARISON OPERATORS - ORDERS LISTS BY THEIR COURSE NUMBERS
+	/**
+	@brief overload lessthan operator to work with courses.
+	*/
 	bool operator < (const course& c)const{return course_number < c.course_number;}
-        bool operator <= (const course& c)const{return course_number <= c.course_number;}
+        /**
+	overload lessthan or equal to operator to work with courses.
+	*/
+	bool operator <= (const course& c)const{return course_number <= c.course_number;}
         bool operator > (const course& c)const{return course_number > c.course_number;}
         bool operator >= (const course& c)const{return course_number >= c.course_number;}
         bool operator == (const course& c)const{return course_number == c.course_number;}
